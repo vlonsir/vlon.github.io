@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>真题，考题，模拟题</title>
+	<link rel="icon" href="http://www.vlon.cn/favicon.ico" type="image/x-icon"/>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/swiper.min.js"></script>
+	<script type="text/javascript" src="./plugin/layui/layui.all.js"></script>
+	<script type="text/javascript" src="./plugin/template/template-web.js"></script>
+	<script type="text/javascript" src="./plugin/bootstrap/4.3.1/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./plugin/bootstrap/3.4.1/css/bootstrap.css" />
+	<link rel="stylesheet" href="./css/swiper.min.css" />
+	<link rel="stylesheet" href="./plugin/layui/layui.css" />
+	<link rel="stylesheet" href="./css/base.css" />
+	<link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_959376_zdmaivewwm.css" />
+	<link rel="stylesheet" href="./css/add.css" />
+	<script type="text/javascript" src="./js/base.js?v=1"></script>
+	<script type="text/javascript" src="./js/add.js?v=1"></script>
+</head>
+<body>
+	<header class="bg-primary tc">
+		<a href="javascript:history.back();" class="back"><i class="iconfont icon-arrowleft"></i></a>
+		<h3>添 加 考 题</h3>
+		<a href="javascript:;" class="add"><i class="iconfont icon-add"></i></a>
+	</header>
+	<select class="select kecheng" id="kecheng">
+		<option value="">请选择课程</option>
+	</select>
+	<select class="select shijuan" id="shijuan">
+		<option value="">请选择试卷</option>
+	</select>
+	<section>
+		<div class="tabs tab-ti">
+			<a href="javascript:;" class="on">单选</a>
+			<a href="javascript:;">多选</a>
+			<a href="javascript:;">简答</a>
+			<a href="javascript:;">论述</a>
+		</div>
+		<div class="tabs-swiper swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<ul class="single">
+						<li class="addSingleTimu"><button class="btn btn-primary btn-block">增加题目</button></li>
+					</ul>
+				</div>
+				<div class="swiper-slide">
+					<ul class="multiple">
+						<li class="addMultipleTimu"><button class="btn btn-primary btn-block">增加题目</button></li>
+					</ul>
+				</div>
+				<div class="swiper-slide">
+					<ul class="short">
+						<li class="addShortTimu"><button class="btn btn-primary btn-block">增加题目</button></li>
+					</ul>
+				</div>
+				<div class="swiper-slide">
+					<ul class="discussion">
+						<li class="addDiscussionTimu"><button class="btn btn-primary btn-block">增加题目</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<button class="btn btn-success save"><i class="iconfont icon-baocun"></i></button>
+		</footer>
+	</section>
+	<div class="modal n">
+		<div class="tabs add-tabs">
+			<a href="javascript:;" class="tab-item on">添加课程</a>
+			<a href="javascript:;" class="tab-item">添加试卷</a>
+			<a href="javascript:;" class="close"><i class="iconfont icon-shanchu3"></i></a>
+		</div>
+		<div class="add-wrapper">
+			<div class="add-item">
+				<input type="text" class="form-control kechengMing" placeholder="请输入课程名">
+			</div>
+			<div class="add-item">
+				<select class="select kecheng">
+					<option value="">请选择课程</option>
+				</select>
+				<select class="select type">
+					<option value="">请选择试卷类型</option>
+					<option value="paper">自考真题</option>
+					<option value="chapter">章节题</option>
+				</select>
+				<ul class="shijuanList">
+					<li>
+						<input type="text" placeholder="请输入试卷名" class="form-control">
+						<a href="javascript:;" class="add"><i class="iconfont icon-add"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<button class="btn btn-primary">保 存</button>
+		</div>
+	</div>
+</body>
+</html>

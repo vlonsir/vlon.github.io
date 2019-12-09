@@ -1,0 +1,33 @@
+a{color:#666;}
+.panel{margin:10px;display: none;}
+dd{display: flex;align-items: flex-start;flex-direction: column;}
+dd a{padding:5px 10px;flex:1;display: flex;width: 100%;margin-top: 5px;}
+dd a i{margin-right: 5px;}
+dd a i:before{margin-right: 5px;}
+.bg-success i,.bg-success span,dl.r dt span,.res .r{color:#419641;}
+.bg-danger i,.bg-danger span,dl.w dt span,.reChoose,.res .w{color:#d9534f;}
+ dd p{width:100%;display: flex;justify-content: flex-end;}
+ dd p a{color:#3385e3;text-align: right;justify-content: flex-end;}
+ dd .analysis{display: none;width:100%;margin-bottom: 20px;}
+dl,.panel-footer p{margin-bottom: 0;}
+.panel-footer{width: 100%;display: flex;justify-content: space-between; align-items: center;}
+.res{display: flex;flex:1;justify-content: flex-end;}
+.res p{margin:0 5px;width: auto;display: none;}
+.panel-footer p span{padding:0 5px;font-weight: bold;}
+.res .n{color:#ec971f;}
+.panel-body{width: 100%;height: auto;overflow-y: auto;overflow-x: hidden;}
+header{width: 100%;display: none;justify-content: space-between;align-items: center;}
+header a {height: 100%;display: flex;}
+header a i{color:#fff;padding: 0 1rem;height: 100%;}
+.single dl,.multiple dl, .short dl, .discussion dl{margin-bottom: 20px;}
+.multiple dl:last-child, .short dl:last-child, .discussion dl:last-child{margin-bottom: 0px;}
+.icon-duoxuan-cuo:before{width:16px;height:18px;border-radius: 4px;display: inline-block;overflow:hidden;}
+.list-group-item{display: flex;align-items: center;align-content: center;}
+.bg-danger{background-color: #e4b9b9;}
+.icon-duoxuan-cuo{display: flex;align-items: center;align-content: center;}
+.multiple .iconfont:before{position:relative;top:2px;}
+.panel-heading{width: 100%;display: flex;justify-content: space-between;align-items: center;}
+.panel-heading i{font-style: normal;}
+.none{width:100%;height: 100px;display: flex;text-align: center;justify-content: center;align-items: center;align-content: center;}
+.none.n{display: none;}
+dd a.list-group-item{align-items: flex-start;}

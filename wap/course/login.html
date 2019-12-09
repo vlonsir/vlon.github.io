@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学习，是一件光荣的事</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="icon" href="http://www.vlon.cn/favicon.ico" type="image/x-icon"/>
+	<style>
+	html{background-color: #4CBAF9;width:100%;height:100%;max-width: 640px;margin:0 auto;padding:0;transition: all 0.3s;}
+	body{width:100%;height: 100%;padding:0;margin:0;display: flex;justify-content: center;align-items: center;flex-direction: column;transition: all 0.3s;}
+	.title{text-align: center;color:#fff;font-size: 3rem;display: flex;align-items: center;justify-content: center;margin-top:-20vh;margin-bottom: 10vh;}
+	form{width:80%;margin:0 auto;display: flex;flex-direction: column;transition: all 0.3s;}
+	select{margin-bottom: 3vh;}
+	select,input{width:100%;height: 40px;line-height: 40px;border-radius: 5vh;border:none;padding:0;padding-left:5vh;box-sizing:border-box;outline: none;font-size:1rem;}
+	input{display: none;transition: all 0.3s;}
+	button{position: relative;top:5vh; width:60px;height: 60px;border-radius: 100%;background-color: #fff;margin:0 auto;border:2px solid #76CBFF;outline: none;}
+	p{width:100%;height: 2vh;display: none;text-align:center;justify-content: center;align-items: center;color: #fff;position: relative;top:5vh;transition: all 0.3s;}
+	</style>
+</head>
+<body>
+	<div class="title">welcome</div>
+	<form action="index.html" id="form">
+		<select name="name" id="name">
+			<option value="visitor">游客</option>
+			<option value="vlon">vlon</option>
+		</select>
+		<input type="password" name="password" id="inp" placeholder="password">
+		<button id="login">登录</button>
+		<p id="tip"></p>
+	</form>
+	<script type="text/javascript">
+		window.onload = function() {
+			var form = document.getElementById("form");
+			var select = document.getElementById("name");
+			var inp = document.getElementById("inp");
+			var login = document.getElementById("login");
+			var tip = document.getElementById("tip");
+			select.onchange = function(e) {
+				if(e.target.value === "vlon") {
+					inp.style.display = "block";
+					form.action = "javascript:;";
+				} else {
+					tip.innerHTML = "";
+					tip.style.display = "none";
+					inp.style.display = "none";
+					form.action = "index.html";
+				}
+			};
+			login.onclick = function() {
+				if(select.value === "vlon") {
+					if(inp.value) {
+						if(inp.value === "welcome") {
+							form.action = "index.html";
+							form.submit();
+						} else {
+							tip.innerHTML = "密码错误";
+							tip.style.display = "flex";
+						}
+					} else {
+						tip.innerHTML = "请输入密码";
+						tip.style.display = "flex";
+					}
+				}
+			};
+			inp.onfocus = function() {
+				tip.innerHTML = "";
+				tip.style.display = "none";
+			};
+			document.onmousedown = function(){
+				if(event.button == 2){
+					//alert("当前页面不能使用右键！");
+					return false;
+				}
+			};
+			document.oncontextmenu = function () {
+				//alert('禁止右键菜单!'); 
+ 				return false;
+			};
+		}
+	</script>
+</body>
+</html>

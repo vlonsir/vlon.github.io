@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<title>个人中心</title>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/swipe.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript" src="js/fuchs.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".order").css("height",$(window).height()+"px");	
+			if(localStorage.fuchsTelNumber){
+				getScoreLogByPhone(localStorage.fuchsTelNumber);
+				getScoreLogByPhone2(localStorage.fuchsTelNumber);
+			}
+			var swiper = new Swiper('.swiper-container',{
+		      	pagination:{
+		        	el:'.swiper-pagination',
+		      	},
+		      	onSlideChangeEnd:function(swiper){
+		      		$(".order .body .tab a").removeClass("on");
+		      		$(".order .body .tab a").eq(swiper.activeIndex).addClass("on");
+		      	}
+		    });  
+		    setTimeout(function(){
+		    	if(localStorage.addList){
+			    	localStorage.addList="";
+			    	swiper.slideTo(1,0,false);
+			    	$(".order .body .tab a").removeClass("on");
+		      		$(".order .body .tab a").eq(1).addClass("on");
+			    }
+		    },500);
+			//点击切换兑换记录和新增记录
+			$(".order .body .tab a").on("click",function(){
+				$(".order .body .tab a").removeClass("on");
+		      	$(this).addClass("on");
+		      	if($(this).index()==0){
+		      		swiper.slideTo(0, 500, false);
+		      	}else{
+		      		swiper.slideTo(1, 500, false);
+		      	}
+			})
+		})
+	</script>
+	<link type="text/css" rel="stylesheet" href="css/swipe.css"/> 
+	<link type="text/css" rel="stylesheet" href="css/fuchs.css"/> 
+</head>
+<body class="order">
+	<div class="head">
+		<a href="javascript:history.go(-1);" class="back"></a>个人中心
+	</div>
+	<div class="body">
+		<div class="tab"><a href="javascript:;" class="on">兑换记录</a><a href="javascript:;">新增记录</a></div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<ul class="dhList" id="dhList">
+						<script type="text/html" id="tpl_dhList">
+						{{each list as value index}}
+						<li>
+							<p class="orderId">订单编号：{{value.id}}</p>
+							<div class="info">
+								<!--img src="images/{{value.id}}.png" alt=""-->
+								<div class="r">
+									<p class="t">{{value.content}}</p>
+									<div class="b">
+										<span>{{value.score}}</span>
+										<em>x1</em>
+									</div>
+								</div>
+							</div>
+							<div class="tit">收货信息</div>
+							<p class="address">{{value.address}}</p>
+						</li>
+						{{/each}}
+						{{if noContent}}
+							<li><p style="width:100%;text-align:center;line-height:100px;">暂无内容</p></li>
+						{{/if}}
+						</script>
+					</ul>
+				</div>
+				<div class="swiper-slide" id="addList">
+					<script type="text/html" id="tpl_addList">
+					{{if noContent}}
+						<li><p style="background:#fff;width:100%;text-align:center;line-height:100px;">暂无内容</p></li>
+					{{else}}
+						<div class="addListTitle">
+							<span>日期</span>
+							<span>积分</span>
+							<span>订单编号</span>
+						</div>
+						<ul class="addList">
+							{{each list as value index}}
+							<li>
+								<span>{{value.createTime}}</span>
+								<span>+{{value.score}}</span>
+								<span>{{value.id}}</span>
+							</li>
+							{{/each}}
+						</ul>
+					{{/if}}
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<a href="list.html"><img src="images/h.png" alt="" />兑换商品</a>
+		<a href="user.html"><img src="images/u.png" alt="" />我的</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+h1,h2,h3{margin: 0;}
+header{width:100%;height:60px;display: flex;justify-content: space-between;align-items: center;}
+header a{width:50px;height: 100%;display: flex;justify-content: center;align-items: center;}
+header a i{color:#fff;}
+section{height:calc(100% - 180px);}
+body{touch-action: none;}
+.tabs{width:100%;height: 50px;display: flex;justify-content: space-between;align-items: center;background-color: #f5f5f5;}
+.tabs a{flex:1;height: 100%;display: flex;align-items: center;justify-content: center;color:#666;transition: all 0.3s;}
+.tabs a.on{background-color: #fff;color: #337ab7;}
+a:link{text-decoration:none;}
+.select{width: 90%;height: 40px;line-height:40px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin:10px 5%;border-radius: 3px;border-color:#ddd;padding:0 10px;}
+section{width:100%;}
+.modal.n{display: none;}
+.modal{display:flex;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);justify-content: center;align-items: center;flex-direction: column;}
+.modal .tabs{border-radius: 3px 3px 0 0;position: relative;}
+.modal .tabs,.add-wrapper{width:80%;margin:0 10%;}
+.add-wrapper{background-color: #fff;}
+.modal .kechengMing{margin:20px 10px;width: 90%;display: flex;}
+.swiper-slide{display: flex;flex-direction: column;}
+.modal .swiper-slide{justify-content: center;align-items: center;}
+.modal .tabs .close{position: absolute;top:-25px;right:-25px;z-index:2;width: 30px;height: 30px;display: flex;opacity: 1;color: #fff;}
+.modal .tabs .close i{font-size: 30px;}
+.add-wrapper .add-item{display: none;}
+.add-wrapper .add-item:first-child{display: block;}
+.modal .shijuanList{width: 90%;max-height:300px;overflow-y:auto;margin:10px 5%;display: block;}
+.modal .shijuanList li{width: 100%;height:40px;display: flex;justify-content: space-between;align-items: center;margin-bottom: 15px;}
+.shijuanList li a{width:40px;height: 100%;display: flex;align-items: center;justify-content: center;}
+.shijuanList li input{margin-right: 10px;}
+.modal .footer{width:80%;padding:15px 5%;box-sizing: border-box;margin: 0 auto;background-color: #fff;border-top: 1px solid #eee;}
+.modal .footer button{width:100%;}
+#shijuan option{display: none;}
+#shijuan option:first-child{display: block;}
+.single,.multiple,.short,.discussion{padding:20px 0;}
+.single>li,.multiple>li,.short li,.discussion li{border-bottom: 10px solid #eee;margin-bottom: 20px;padding-bottom: 10px;}
+.single>li:last-child,.multiple>li:last-child,.short li:last-child,.discussion li:last-child{border-bottom: none;}
+.single .timu,.single .choose-item,.multiple .timu,.multiple .choose-item{margin:0 5% 10px;width:90%;}
+.single .timu, .multiple .timu{display: flex;align-items: center;height: 34px;}
+.single .timu a, .multiple .timu a{display: flex;height: 100%;width:45px;justify-content: center; align-items: center;}
+.single .choose-item,.multiple .choose-item{height:35px;display: flex;align-items: center;}
+.single .choose-item .choose,.multiple .choose-item .choose{width:30px;height:100%;display: flex;justify-content: flex-start;align-items: center;text-align: center;}
+.single .choose-item>input,.multiple .choose-item>input{flex:1;}
+.single .choose-item .set,.multiple .choose-item .set{width:40px;height: 100%;display: flex;align-items: center;justify-content: center;}
+.tabs-swiper{height: calc(100% - 76px);overflow-y: auto;}
+.addSingleTimu button,.addMultipleTimu button,.addShortTimu button,.addDiscussionTimu button{margin-top: -10px;margin-left:5%;margin-right:5%;width:90%;}
+.short .timu,.discussion .timu{margin-bottom: 5px;display: flex;align-items: center;}
+.short textarea, .short .timu,.discussion .timu,.discussion textarea{width:90%;margin-left:5%;}
+.short .timu a,.discussion .timu a{width:40px;display: flex;justify-content: center;align-items: center;}
+.short .timu input,.discussion .timu input{flex:1;}
+section .footer{width:100%;height: 40px;display: flex;justify-content: space-between;align-items: center;}
+section .footer button{width: 100%;border-radius: 0;}
+.analysis{width:90%;margin-left: 5%;}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>课程</title>
+	<link rel="icon" href="http://www.vlon.cn/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="./plugin/bootstrap/3.4.1/css/bootstrap.css" />
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_959376_zdmaivewwm.css" />
+	<link rel="stylesheet" href="./plugin/layui/layui.css" />
+	<link rel="stylesheet" href="./css/base.css" />
+	<link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./plugin/layui/layui.all.js"></script>
+	<script type="text/javascript" src="./plugin/template/template-web.js"></script>
+	<script type="text/javascript" src="./plugin/bootstrap/4.3.1/js/bootstrap.js"></script>
+	<script type="text/javascript" src="./js/base.js?v=1"></script>
+	<script type="text/javascript" src="./js/index.js?v=1"></script>
+</head>
+<body>
+	<header class="bg-primary tc">
+		<h3>课 程</h3>
+		<a href="./add.html?name=vlon&password=welcome" class="add"><i class="iconfont icon-add"></i></a>
+	</header>
+	<div class="list-group" id="listGroup">
+		<script type="text/html" id="listGroupTpl">
+			{{if list.length>0}}
+				{{each list}}
+				<a class="list-group-item" href="javascript:;" name="{{$value.name}}" id="{{$value.id}}">
+					<span>{{$value.name}}</span>
+					<i class="badge">{{$value.count}}</i>
+				</a>
+				{{/each}}
+			{{else}}
+				<p class="none">暂无课程</p>
+			{{/if}}
+		</script>
+	</div>
+</body>
+</html>

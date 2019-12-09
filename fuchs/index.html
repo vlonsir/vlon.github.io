@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<title>积分兑换—畅享福斯情怀</title>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/fuchs.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".index").css("height",$(window).height()+"px");
+			if(localStorage.fuchsTelNumber){
+				location.href="user.html";
+			}
+		})
+	</script>
+	<link type="text/css" rel="stylesheet" href="css/fuchs.css?v=1.0.0.2"/> 
+</head>
+<body class="index">
+	<div class="head"><img src="http://static.weifeng360.com/html/fuchsScore/images/logo.svg" alt="" /><span>会员信息注册</span></div>
+	<img src="images/t.png" alt="" class="logo" />
+	<div class="inp">
+		<p><span>手机号：</span><input type="tel" maxlength="11" placeholder="请输入“旗舰店”订单“收货人”手机号" /></p>
+		<p><span>验证码：</span><input type="text" id="telCode" maxlength="6" placeholder="请输入验证码"/>
+			<button id="getTelCode" class="pa getTelCode">发送验证码</button>
+		</p>
+		<button>前往兑换</button>
+	</div>
+</body>
+</html>

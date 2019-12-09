@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<title>个人中心</title>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/fuchs.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".user").css("height",$(window).height()+"px");
+			$(".user .body .d1 span").html(localStorage.fuchsTelNumber||'');
+			$(".user .body .d2 p").html(localStorage.fuchsScore||0);
+			//if(localStorage.fuchsTelNumber){
+				//getScore(localStorage.fuchsTelNumber);
+			//}
+		})
+	</script>
+	<link type="text/css" rel="stylesheet" href="css/fuchs.css"/> 
+</head>
+<body class="user">
+	<div class="head">
+		<a href="javascript:history.go(-1);" class="back"></a>个人中心
+	</div>
+	<div class="body">
+		<div class="d1">
+			<img src="images/fuchs.jpg" alt=""><span></span>
+		</div>
+		<div class="d2">
+			<span>我的积分</span>
+			<p>0</p>
+		</div>
+		<div class="d3">
+			<a href="javascript:;">添加订单号提升积分</a>
+			<div>
+				<input type="text" maxlength="50" value="请输入京东/天猫福斯旗舰店订单编号">
+				<button>验证</button>
+			</div>
+		</div>
+		<div class="d4">
+			<a href="order.html">积分记录</a>
+		</div>
+	</div>
+	<div class="foot">
+		<a href="list.html"><img src="images/h.png" alt="" />兑换商品</a>
+		<a href="user.html"><img src="images/u.png" alt="" />我的</a>
+	</div>
+	<div class="popAlert"></div>
+	<div class="validID">
+		<div>
+			<p>请输入该订单号对应的收货手机号中<br/>接收到的验证码</p>
+			<input type="text" maxlength="6">
+			<button>确定</button>
+		</div>
+	</div>
+</body>
+</html>

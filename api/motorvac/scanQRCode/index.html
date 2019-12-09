@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>供应链追溯</title>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="./jquery-2.1.4.min.js"></script>
+	<style>
+	html,body{margin:0;padding:0;}
+	input,button{outline:none;}
+	body{}
+	.header{width:100%;text-align:center;padding: 25px 0px;}
+	.header img{width: 25%;height: auto;display:inline-block;vertical-align: middle;}
+	.header span{font-size: 1em;font-weight: bolder;}
+	.container{width:100%;background-color: #621887;}
+	.container .row{width:100%;padding:50px 3%;overflow: hidden;box-sizing: border-box;position:relative;}
+	.container .row span{float:left;font-size: 0.8em;color:#fff;line-height: 40px;}
+	.container .row input{float:left;border:none;border-radius:0px;height:40px;line-height: 40px;text-indent: 5px;width:calc(100% - 181px);padding:0;border-left:1px solid #ddd;border-right:1px solid #ddd;box-sizing: border-box;}
+	#saoyisao{float:left;border:none;width:35px;height:40px;line-height: 40px;background:#fff url('http://oa.weifeng360.com/s/saoyisao.png') no-repeat center center / 35px;border-radius: 5px 0px 0px 5px;}
+	#yanzheng{float:left;border:none;width:60px;height:40px;line-height: 40px;border-radius: 0px 5px 5px 0px;background-color: #fff;}
+	.qr{width:150px;display:block;position:absolute;left: 50%;bottom: 10px;z-index: 2;margin-left: -75px;}
+	
+	</style>
+</head>
+<body>
+	<div class="header">
+		<!-- <img src="http://static.weifeng360.com/html/motorvac/anti-fake/static/img/logo.jpg" alt=""> -->
+		<span>MOTORVAC全国商品真伪验证中心</span>
+	</div>
+	<div class="container">
+		<div class="row">
+		
+			<span>防伪码(数字)：</span>
+			<button id="saoyisao"></button>	
+			<input type="text" maxlength="16" placeholder="例：1442676709688320" id="code">
+			<button id="yanzheng">验证</button>
+		</div>
+	</div>
+	<div id="resDom"></div>
+	<!-- <img src="http://static.weifeng360.com/html/motorvac/anti-fake/static/img/qr.be882ea.jpg" alt="" class="qr"> -->
+	<script type="text/javascript">
+		var obj={};
+		function isWeiXin(){
+	    	var ua = window.navigator.userAgent.toLowerCase();
+	    	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+	    		return true;
+	    	}else{
+	    		return false;
+	    	}
+	    }
+
+		function getWxSign(){ /**微信签名方法*/
+			$.ajax({
+				type:"get",
+				url:"index.php",
+				dataType:"json",
+				success:function(data){	 
+					obj={ //通过config接口注入权限验证配置
+					    debug: false,
+					    appId: "wxf401d1de153c94ad", // 必填，公众号的唯一标识
+					    timestamp:data.timestamp, // 必填，生成签名的时间戳
+					    nonceStr: data.noncestr, // 必填，生成签名的随机串
+					    signature: data.signature,// 必填，签名，见附录1
+					    jsApiList: ["scanQRCode"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+					};
+					wx.config(obj);
+					wx.error(function(res){ //通过error接口处理失败验证
+					  	console.log(JSON.stringify(res));
+					});	
+				},
+				error:function(err){
+					console.log(JSON.stringify(err));
+				}
+			})	
+		}
+		
+	    $(function(){
+
+	    	if(isWeiXin()){ //加载微信签名
+		        getWxSign();				
+		    }
+
+	    	$("#yanzheng").on("click",function(){
+				var v = $("#code").val().trim();
+				if(v){
+					if(v.length===16){
+						window.location.href="http://static.weifeng360.com/html/motorvac/anti-fake/#/"+v;
+					}else{
+						alert("防伪码错误");
+					}
+				}else{
+					alert("请输入防伪码");
+				}
+			});
+
+	    	$("#saoyisao").on("click",function(){
+				wx.scanQRCode({
+				    needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+				    scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+				    success: function (res) {
+					    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+					    if(result){
+					    	$("#code").val(result);
+					    	setTimeout(function(){
+					    		window.location.href="http://static.weifeng360.com/html/motorvac/anti-fake/#/"+result;
+					    	},200)
+					    }
+					},
+					error:function(){
+						alert("扫描失败请重试");
+					}
+				});	
+			});
+			
+	    })
+	</script>
+	
+</body>
+</html>

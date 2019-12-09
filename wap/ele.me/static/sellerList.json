@@ -1,0 +1,990 @@
+[	
+	{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/a/59/2c59fec18103cf2e622361c4ba706png.png",
+			"name": "和合谷(亦庄店)",
+			"子名称": "",
+			"subName": "和合谷",
+			"品类": "",
+			"category": ["简餐","地方小吃"],
+			"address": {
+				"province": "北京",
+				"city": "北京市",
+				"country": "经济技术开发区",
+				"area": "文化园西路6号院16号楼1层103号"
+			},
+			"商家状态":"0代表商家审核中，1代表正常营业，2代表商家休息，3代表商家已关店，4代表商家店铺被处罚暂停营业",
+			"status":1,
+			"tel":"01067865029",
+			"start_business_time": "07:00",
+			"end_business_time": "22:00",
+			"tag": "年货节",
+			"id": "E2000009600978540727",
+			"评分":"",
+			"score": 4.8,
+			"月销单量":"",
+			"sales": 3550,
+			"配送方式":"蜂鸟专送",
+			"hummingbird": "蜂鸟专送",
+			"是否准时达":"准时达",
+			"onTime": "",
+			"最低多少钱起送": "",
+			"startUpSend": 20,
+			"配送费": "",
+			"freight": 7.5,
+			"配送时长": "分钟",
+			"duration": 29,
+			"距离": "km",
+			"distance": 1.4,
+			"热门评价": "",
+			"evaluate": "招牌宫保鸡丁肉汁充分",
+			"优惠":"",
+			"offer": [
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满25减5","subName":"满25减5"},{"name":"满40减15","subName":"满40减15"}]},
+				{"name":"折扣","enName":"discount","list": [{"name":"折扣商品5折起","subName":"5折"}]},
+				{"name":"首单","enName":"firstOrder","list": [{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list": [{"name":"特价商品5元起","subName":"5元特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": [{"name":"9元会员红包","subName":"9元会员红包"}]},
+				{"name":"红包","enName":"luckyMoney","list": []}
+			],
+			"服务":"",
+			"service": [{
+					"name": "阳光餐厅",
+					"desc": "商户参与北京市人民政府“阳光餐饮”工程，实现了食品安全信息公开化、食品加工操作过程可视化，接受社会监督。"
+				},{
+					"name": "拒单赔",
+					"desc": "商家原因导致订单取消，赔付代金券"
+				},{
+					"name": "开发票",
+					"desc": "该商家支持开发票，请在下单时填写好发票抬头"
+				}
+			],
+			"公告":"",
+			"announcement": "中国十大快餐品牌和合谷，邀您品尝本店新品：黄金猪排盖饭！",
+			"邻店":"",
+			"nearby": [
+				{
+					"id":"111",
+					"name":"邻活便利(7点便利店)",
+					"duration": 45,
+					"distance": 1.8
+				}, {
+					"id":"222",
+					"name":"邻活便利(旧宫店)",
+					"duration": 46,
+					"distance": 5.0
+				}, {
+					"id":"333",
+					"name":"邻活便利(方庄店)",
+					"duration": 36,
+					"distance": 5.0
+				}
+			]
+		},
+		"foods":[{
+				"name": "专题活动",
+				"enName": "topic",
+				"desc": "",
+				"list": [
+					{
+						"id": "10067707",
+						"icon": "https://fuss10.elemecdn.com/2/a3/90cda7be6d78fb6c7451c6e01af2cpng.png",
+						"name": "开工大吉",
+						"desc": "",
+						"list": ["805802204","875390675","928177225"]
+					},{
+						"id": "",
+						"icon": "https://fuss10.elemecdn.com/8/ba/70e296b3d794c178157718dbfb6eapng.png",
+						"name": "国菜经典 宫保鸡丁再次升级",
+						"desc": "无肉不欢 肉量增加30% 黄瓜 bye bye",
+						"list": ["1434927270","842049421","867000078","842042104"]
+					}
+				]
+			},{
+				"name": "商家推荐",
+				"enName": "shopRecommend",
+				"desc": "",
+				"list": ["805812931","875390675","928177225","805792043","1434927270","915945778","867000078","836302064"]
+			},{
+				"热销":"",
+				"name":"热销",
+				"enName": "hotSale",
+				"desc":"大家喜欢吃，才叫真好吃。",
+				"list":["805783731","867000078","952628082","866990772","936271702","805792039"]
+			},{
+				"name":"优惠",
+				"enName": "favourable",
+				"desc":"美味又实惠，大家快来抢",
+				"list":["972886327","805802204","875390675","955448120"]
+			},{
+				"name":"和合盖饭",
+				"enName": "hehegaifan",
+				"desc":"",
+				"list":[]
+			},{
+				"name":"饮品套餐",
+				"enName": "drinkPackage",
+				"desc":"",
+				"list":[]
+			},{
+				"name":"商务套餐",
+				"enName": "businessPackage",
+				"desc":"",
+				"list":["805783673","805802204","805783681","805792043","915959818","915945778"]
+			},{
+				"name":"多人套餐",
+				"enName": "multiplayerPackage",
+				"desc":"",
+				"list":["836302064","909131475","889759656"]
+			},{
+				"name":"配菜小食",
+				"enName": "sideDishes",
+				"desc":"",
+				"list":["842515406","780536387","896060878","780541047","805797546","805783752","915956286","805812096","984686180"]
+			},{
+				"name":"饮料汤羹",
+				"enName": "beverageSoup",
+				"desc":"",
+				"list":["766168775","971458126","838172349","1434927314","1434927315","1434922565","1434927310","988380501","1703345480","1703365060"]
+			},{
+				"name":"特色面品",
+				"enName": "featuredProducts",
+				"desc":"",
+				"list":["1703902737","1703893337"]
+			}
+		],
+		"comment":{"list":[]},
+		"餐饮":"",
+		"goods":[{
+				"id":"842042104",
+				"icon":"https://fuss10.elemecdn.com/9/b8/a4cf6502a4b4fac9c1bc1685cd2bdjpeg.jpeg",
+				"name":"宫保鸡丁酸枣汁套餐",
+				"desc":"包含：宫保鸡丁盖饭+酸枣汁。",
+				"price":33,
+				"sales":9,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"842049421",
+				"icon":"https://fuss10.elemecdn.com/4/44/069045a0238877d9e319970387362jpeg.jpeg",
+				"name":"宫保鸡丁可乐套餐",
+				"desc":"包含：宫保鸡丁盖饭+可乐。",
+				"price":28,
+				"sales":47,
+				"stock":0,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"1434927270",
+				"icon":"https://fuss10.elemecdn.com/4/24/5ba3297e3ff990463aba116c215c9jpeg.jpeg",
+				"name":"宫保鸡丁鲜柠红茶套餐",
+				"desc":"包含：宫保鸡丁盖饭+鲜柠红茶（柠檬味）。",
+				"price":34,
+				"sales":90,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"928177225",
+				"icon":"https://fuss10.elemecdn.com/1/c9/b29d06aa18fccb424375200bfc585png.png",
+				"name":"台式卤肉盖饭+鲜柠红茶（柠檬味）",
+				"desc":"包含：台式卤肉盖饭+鲜柠红茶",
+				"price":34,
+				"sales":26,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805812931",
+				"icon":"https://fuss10.elemecdn.com/9/4c/f49f862799bee57c2493e6d6e337ejpeg.jpeg",
+				"name":"和合牛肉盖饭",
+				"desc":"包含：牛肉+米饭。赠送辣酱1袋",
+				"price":29,
+				"sales":214,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805783673",
+				"icon":"https://fuss10.elemecdn.com/9/c6/236ca81a3cfa9f74678c91a790cd9jpeg.jpeg",
+				"name":"宫保鸡丁鸡肉串套餐",
+				"desc":"包含：宫保鸡丁盖饭＋海苔鸡肉串2串＋可乐。",
+				"price":33,
+				"sales":37,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805802204",
+				"icon":"https://fuss10.elemecdn.com/c/5b/e3d51c49ab95afb887fb7c6ac9dc0png.png",
+				"name":"秘汁鸡排鸡肉串套餐",
+				"desc":"包含：秘汁鸡排盖饭＋海苔鸡肉串2串＋可乐。",
+				"price":31,
+				"sales":81,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805783681",
+				"icon":"https://fuss10.elemecdn.com/7/a6/f4e9a3bee0aa6991cea1155ce3239png.png",
+				"name":"鱼香肉丝鸡肉串套餐",
+				"desc":"包含：鱼香肉丝盖饭＋海苔鸡肉串2串＋可乐。",
+				"price":32,
+				"sales":40,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805792043",
+				"icon":"https://fuss10.elemecdn.com/3/7a/4994a450579cf8c431e0de2621f26png.png",
+				"name":"咖喱牛肉鸡肉串套餐",
+				"desc":"包含：咖喱牛肉盖饭＋海苔鸡肉串2串＋可乐。",
+				"price":39,
+				"sales":39,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"915959818",
+				"icon":"https://fuss10.elemecdn.com/3/16/717bc0e17851a9294c7b76d3813bbpng.png",
+				"name":"干烧水煮鱼和合套餐A",
+				"desc":"包含：干烧水煮鱼盖饭+炝炒圆白菜+鲜柠红茶（柠檬味）",
+				"price":43,
+				"sales":28,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"915945778",
+				"icon":"https://fuss10.elemecdn.com/d/96/720cda19a3ad578c999d12faccc63png.png",
+				"name":"鸡锦牛肉和合套餐A",
+				"desc":"包含：鸡锦牛肉盖饭+美味海带丝+鲜柠红茶（柠檬味）",
+				"price":58,
+				"sales":13,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"836302064",
+				"icon":"https://fuss10.elemecdn.com/0/44/0eb044be7489f01a735e34340ea50jpeg.jpeg",
+				"name":"双人套餐A",
+				"desc":"包含：宫保鸡丁盖饭+秘汁鸡排盖饭+可乐2听。",
+				"price":54,
+				"sales":71,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"909131475",
+				"icon":"https://fuss10.elemecdn.com/6/79/ccde81fa541328efe126808243822jpeg.jpeg",
+				"name":"双人套餐E",
+				"desc":"包含：黄金猪排盖饭+宫保鸡丁盖饭+美味海带丝+炝炒圆白菜+冷萃酸枣汁+听可乐",
+				"price":89,
+				"sales":1,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"889759656",
+				"icon":"https://fuss10.elemecdn.com/e/1e/61d0abd70ad37cc81bc68c6fc48d9jpeg.jpeg",
+				"name":"双人套餐C",
+				"desc":"包含：宫保鸡丁盖饭1碗+双拼咖喱牛肉鸡排盖饭1碗+炝炒圆白菜1份+海苔鸡肉串2串+酸枣汁2瓶。",
+				"price":89,
+				"sales":5,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"842515406",
+				"icon":"https://fuss10.elemecdn.com/7/3c/95faf9e07078bcbe9aef4f51fc4bepng.png",
+				"name":"卤蛋",
+				"desc":"",
+				"price":3.5,
+				"sales":320,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"780536387",
+				"icon":"https://fuss10.elemecdn.com/8/5c/69bb1e9d3e00d483d3af4f5d15d70png.png",
+				"name":"海苔鸡肉串",
+				"desc":"通份－包含：鸡肉、海苔。1份2串。",
+				"price":5.5,
+				"sales":284,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"896060878",
+				"icon":"https://fuss10.elemecdn.com/8/81/6a2fad4cdaf0a59350b32295e2603png.png",
+				"name":"茶碗蒸",
+				"desc":"包含：虾仁+香菇+鸡蛋",
+				"price":7.5,
+				"sales":393,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":98,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"780541047",
+				"icon":"https://fuss10.elemecdn.com/d/8b/d1f74b78eb355b77690152b292f6epng.png",
+				"name":"四喜龙珠",
+				"desc":"通份－包含鸡肉，1份4粒鸡肉丸。赠送1袋番茄沙司。",
+				"price":7.5,
+				"sales":151,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":95,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805797546",
+				"icon":"https://fuss10.elemecdn.com/d/43/8dd29e0663d1069d71fad99038581png.png",
+				"name":"藕合",
+				"desc":"通份－包含莲藕＋猪肉，1份4个。",
+				"price":11,
+				"sales":135,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805783752",
+				"icon":"https://fuss10.elemecdn.com/2/97/ed4f7d332025f8575ef455874af66png.png",
+				"name":"关东煮组合",
+				"desc":"包含：白萝卜＋竹轮烧＋香肠＋海带＋魔芋丝。",
+				"price":12,
+				"sales":245,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"915956286",
+				"icon":"https://fuss10.elemecdn.com/c/da/33ded61cd9e83f6798aca7125864dpng.png",
+				"name":"香脆猪排",
+				"desc":"包含：炸猪排1块",
+				"price":12,
+				"sales":138,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805812096",
+				"icon":"https://fuss10.elemecdn.com/5/8d/aa66d64754d7efd9a3455677b2336png.png",
+				"name":"米饭",
+				"desc":"包含：米饭1碗",
+				"price":3,
+				"sales":91,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"984686180",
+				"icon":"https://fuss10.elemecdn.com/5/03/885401f60ac9ce9e9511710afc09djpeg.jpeg",
+				"name":"菌菇三鲜煎饺",
+				"desc":"包含：菌菇三鲜煎饺4个 主要原料: 青菜, 洋葱, 面粉, 猪肉, 杏鲍菇, 木耳",
+				"price":6,
+				"sales":180,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"766168775",
+				"min_purchase":1,
+				"name":"听装可乐",
+				"icon":"http://fuss10.elemecdn.com/4/8a/9d941f4e9358352cae048d8006049png.png",
+				"desc":"",
+				"price":7,
+				"sales":57,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":"招牌"
+			},{
+				"id":"971458126",
+				"min_purchase":1,
+				"name":"西施豆腐羹",
+				"icon":"https://fuss10.elemecdn.com/b/c5/c354271d98c71e46e6b562b879412jpeg.jpeg",
+				"desc":"包含：豆腐+猪肉+鸡蛋+海米+枸杞",
+				"price":8.5,
+				"sales":23,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"838172349",
+				"price":12,
+				"min_purchase":1,
+				"name":"冷萃酸枣汁",
+				"icon":"https://fuss10.elemecdn.com/5/05/bfe4e65687c8de0485178a2cd0babpng.png",
+				"desc":"低温萃取，自然健康",
+				"sales":17,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"1434927314",
+				"price":13,
+				"min_purchase":1,
+				"name":"鲜柠红茶（柠檬味）",
+				"icon":"https://fuss10.elemecdn.com/f/65/4d20f1a9ffa25131de45f42bcafaapng.png",
+				"desc":"",
+				"sales":60,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"1434927315",
+				"price":13,
+				"min_purchase":1,
+				"name":"鲜柠红茶（芒果味）",
+				"icon":"https://fuss10.elemecdn.com/4/5d/5afd03d414f90cd71acfe542c24a8png.png",
+				"desc":"",
+				"sales":19,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"1434922565",
+				"price":13,
+				"min_purchase":1,
+				"name":"鲜柠优格",
+				"icon":"https://fuss10.elemecdn.com/d/ec/3269938daf51c3d7b2a489ec7f8a2png.png",
+				"desc":"",
+				"sales":21,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"1434927310",
+				"price":13,
+				"min_purchase":1,
+				"name":"经典奶茶",
+				"icon":"https://fuss10.elemecdn.com/6/13/537d9b21ca0379bcea5df9d172089png.png",
+				"desc":"冷饮",
+				"sales":49,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"988380501",
+				"price":8,
+				"min_purchase":1,
+				"name":"芙蓉菌菇汤(需自备开水）",
+				"icon":"https://fuss10.elemecdn.com/a/f3/c974ba45d1d434cea400796ca8d0dpng.png",
+				"desc":"通份－包含鸡蛋＋菌菇，非油炸，冻干汤块，需75℃以上开水冲泡<br/>主要原料: 鸡蛋, 其他菌菇类",
+				"sales":71,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"1703345480",
+				"price":6,
+				"min_purchase":1,
+				"name":"南瓜粥（正餐）",
+				"icon":"https://fuss10.elemecdn.com/7/9b/6ea63b362ad73642cf796a1324bfdjpeg.jpeg",
+				"desc":"香香甜甜就是我",
+				"sales":22,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"1703365060",
+				"price":7,
+				"min_purchase":1,
+				"name":"皮蛋粥（正餐）",
+				"icon":"https://fuss10.elemecdn.com/3/6a/70b85285e7c4edbcb4bb395b5020bjpeg.jpeg",
+				"desc":"我们超有料",
+				"sales":15,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":""
+			},{
+				"id":"805783731",
+				"price":1,
+				"最低几份起订":"",
+				"min_purchase":5,
+				"name":"葱香鸡肉圈（5份起订）",
+				"icon":"https://fuss10.elemecdn.com/4/97/6c817b965d8a71ac663dff2e1d83dpng.png",
+				"desc":"包含：鸡肉。1份1个。",
+				"月销份数":"",
+				"sales":1357,
+				"stock":20,
+				"buyCount":0,
+				"好评率百分比":"95%",
+				"applauseRate":95,
+				"tag":""
+			},{
+				"id":"867000078",
+				"price":21,
+				"min_purchase":1,
+				"name":"宫保鸡丁盖饭",
+				"icon":"https://fuss10.elemecdn.com/0/41/3bde80a959fef3ba7df19f60cafb6jpeg.jpeg",
+				"desc":"包含：鸡肉＋葱＋花生米＋米饭。招牌饭品。<br />主要原料: 鸡肉, 大葱, 大米, 花生",
+				"sales":1289,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":99,
+				"tag":"招牌"
+			},{
+				"id":"952628082",
+				"price":5.5,
+				"min_purchase":1,
+				"name":"金枪鱼土豆泥",
+				"icon":"https://fuss10.elemecdn.com/3/d9/956bdbde75654c5f59b4dbd132486png.png",
+				"desc":"含土豆+金枪鱼",
+				"sales":468,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":99,
+				"tag":""
+			},{
+				"id":"866990772",
+				"price":19,
+				"min_purchase":1,
+				"name":"秘汁鸡排盖饭",
+				"icon":"https://fuss10.elemecdn.com/d/bf/5905a1f888633d0b8a0fa5c83b172jpeg.jpeg",
+				"desc":"包含：鸡肉＋西兰花＋米饭。“京城特色佳肴”。 主要原料: 鸡肉, 西兰花",
+				"sales":459,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":98,
+				"tag":""
+			},{
+				"id":"936271702",
+				"price":24,
+				"min_purchase":1,
+				"name":"干烧水煮鱼盖饭",
+				"icon":"https://fuss10.elemecdn.com/3/d0/4b8ae5c1a2208e1c6d74cfb64922cjpeg.jpeg",
+				"desc":"通份－包含：巴沙鱼＋西兰花＋米饭，鱼类产品小心有刺。“京城特色佳肴”。",
+				"sales":420,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":98,
+				"tag":""
+			},{
+				"id":"805792039",
+				"price":20,
+				"min_purchase":1,
+				"name":"鱼香肉丝盖饭",
+				"icon":"https://fuss10.elemecdn.com/e/6a/ddf9e43c199966b86c1807e711cedjpeg.jpeg",
+				"desc":"包含：猪肉＋笋丝＋胡萝卜＋木耳＋青椒＋米饭。",
+				"sales":407,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":100,
+				"tag":""
+			},{
+				"id":"972886327",
+				"icon":"https://fuss10.elemecdn.com/b/9d/fbf347f4e8754f75e2d65088aa757jpeg.jpeg",
+				"name":"单人轻食套餐",
+				"desc":"包含：藕合4只+鲜柠红茶（柠檬味）1杯+四季大拌菜1盒+葱香鸡肉圈6只",
+				"price":38,
+				"sales":11,
+				"stock":0,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"805802204",
+				"icon":"https://fuss10.elemecdn.com/c/5b/e3d51c49ab95afb887fb7c6ac9dc0png.png",
+				"name":"秘汁鸡排鸡肉串套餐",
+				"desc":"包含：秘汁鸡排盖饭＋海苔鸡肉串2串＋可乐。",
+				"price":31,
+				"sales":81,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"875390675",
+				"icon":"https://fuss10.elemecdn.com/d/81/4dc42ef762d70570e0fb00b735adepng.png",
+				"name":"双拼咖喱牛肉鸡排鲜柠红茶套餐",
+				"desc":"包含：双拼咖喱牛肉鸡排饭+鲜柠红茶（柠檬味）",
+				"price":46,
+				"sales":94,
+				"stock":0,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"955448120",
+				"icon":"https://fuss10.elemecdn.com/c/5d/590e6cc95ef4292b0dde45af492e1png.png",
+				"name":"双人轻食套餐",
+				"desc":"包含：2杯鲜柠红茶（柠檬味）+2串海苔鸡肉串+6个葱香鸡肉圈+1盒四季大拌菜",
+				"price":46,
+				"sales":2,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"min_purchase":1,
+				"tag":""
+			},{
+				"id":"1703902737",
+				"price":20,
+				"min_purchase":1,
+				"name":"上海葱油拌面",
+				"icon":"https://fuss10.elemecdn.com/2/23/3dcb8192c44a2ecc74b0a8b881b26jpeg.jpeg",
+				"desc":"包含：面条+葱油 主要原料: 大葱, 面粉",
+				"sales":6,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":"新品"
+			},{
+				"id":"1703893337",
+				"price":20,
+				"min_purchase":1,
+				"name":"老北京炸酱面",
+				"icon":"https://fuss10.elemecdn.com/f/98/5061d4f902cf70e8a5f25b56cd52ajpeg.jpeg",
+				"desc":"包含面条+炸酱+菜码 主要原料: 黄瓜, 面粉, 猪肉",
+				"sales":4,
+				"stock":20,
+				"buyCount":0,
+				"applauseRate":0,
+				"tag":"新品"
+			}
+		]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/f/8c/a0243ff6b05f952b127524b5bf99ajpeg.jpeg",
+			"name": "田老师红烧肉(亦庄荣华南路店)",
+			"subName": "田老师红烧肉",
+			"status":1,
+			"tag": "品牌",
+			"id": "E9158502469244221396",
+			"score": 4.6,
+			"sales": 3455,
+			"hummingbird": "蜂鸟专送",
+			"onTime": "准时达",
+			"startUpSend": 20,
+			"freight": 9,
+			"duration": 46,
+			"distance": 2.78,
+			"evaluate": "套餐随便点份份都好吃",
+			"offer":[
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满30减10","subName":"满30减10"},{"name":"满45减17","subName":"满45减17"}]},
+				{"name":"折扣","enName":"discount","list": [{"name":"折扣商品5折起","subName":"5折"}]},
+				{"name":"首单","enName":"firstOrder","list":[{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list": [{"name":"特价商品18元起","subName":"18元特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list":[]},
+				{"name":"红包","enName":"luckyMoney","list": []}
+			],
+			"service": [{"name": "阳光餐厅"},
+				{"name": "支持自取"},
+				{"name": "开发票"}
+			],
+			"nearby": [
+				{
+					"id":"111",
+					"name":"田老师红烧肉(开发区荣华北路店)",
+					"duration": 37,
+					"distance": 2.1
+				}, {
+					"id":"222",
+					"name":"田老师红烧肉(亦庄荣华南路店)",
+					"duration": 44,
+					"distance": 3.1
+				}, {
+					"id":"333",
+					"name":"田老师红烧肉(旧宫四店)",
+					"duration": 37,
+					"distance": 4.4
+				}, {
+					"id":"444",
+					"name":"田老师红烧肉(旧宫二店)",
+					"duration": 39,
+					"distance": 4.4
+				}, {
+					"id":"555",
+					"name":"田老师红烧肉(旧宫一店)",
+					"duration": 34,
+					"distance": 4.9
+				}
+			]
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/5/03/2d6ca9d1f0af1c7cee6e29b9c321ejpeg.jpeg",
+			"name": "老家肉饼(林肯公园C区店)",
+			"subName": "老家肉饼",
+			"status":1,
+			"tag": "年货节",
+			"id": "E14746444965386554000",
+			"score": 4.8,
+			"sales": 1086,
+			"hummingbird": "蜂鸟专送",
+			"onTime": "准时达",
+			"startUpSend": 20,
+			"freight": 8,
+			"duration": 31,
+			"distance": 1.3,
+			"evaluate": "",
+			"offer": [
+				{"name":"满减","enName":"fullReduction","list": [{"name":"满29减12","subName":"满29减12"},{"name":"满50减20","subName":"满50减20"}]},
+				{"name":"折扣","enName":"discount","list":[{"name":"折扣商品5折起","subName":"5折"}]},
+				{"name":"首单","enName":"firstOrder","list": [{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list": []},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": []},
+				{"name":"红包","enName":"luckyMoney","list": []}	
+			],
+			"service": [{"name": "开发票"}
+			],
+			"nearby": [
+				{
+					"id":"111",
+					"name":"老家肉饼(亦庄林肯公园)",
+					"duration": 26,
+					"distance": 1.5
+				}, {
+					"id":"222",
+					"name":"老家肉饼(荣华路店)",
+					"duration": 37,
+					"distance": 3.5
+				}, {
+					"id":"333",
+					"name":"老家肉饼(旧忠路店)",
+					"duration": 33,
+					"distance": 4.4
+				}, {
+					"id":"444",
+					"name":"老家肉饼(泰和园店)",
+					"duration": 36,
+					"distance": 4.8
+				}
+			]
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/e/91/ac1b7b5dde1c294da1d5ef1d37ac5jpeg.jpeg",
+			"name": "故乡村(上海沙龙店)",
+			"subName": "故乡村",
+			"status":1,
+			"tag": "",
+			"id": "E11846954789163263473",
+			"score": 4.8,
+			"sales": 1070,
+			"hummingbird": "",
+			"onTime": "",
+			"startUpSend": 20,
+			"freight": 9,
+			"duration": 43,
+			"distance": 2.76,
+			"evaluate": "",
+			"offer":[
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满29减12","subName":"满29减12"},{"name":"满50减20","subName":"满50减20"}]},
+				{"name":"折扣","enName":"discount","list":[{"name":"折扣商品7折起","subName":"7折"}]},
+				{"name":"首单","enName":"firstOrder","list":[{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list": [{"name":"特价商品4元起","subName":"4特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": []},
+				{"name":"红包","enName":"luckyMoney","list": []}
+			],
+			"service": [{"name": "开发票"}],
+			"nearby": []
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/9/6a/f5edac66bc371753000a5bfe005fbjpeg.jpeg",
+			"name": "小贤家",
+			"subName": "小贤家",
+			"status":1,
+			"tag": "星选",
+			"id": "E12039568534437088919",
+			"score": 4.7,
+			"sales": 3173,
+			"hummingbird": "",
+			"onTime": "",
+			"startUpSend": 79,
+			"freight": 0,
+			"duration": 61,
+			"distance": 30.60,
+			"evaluate": "",
+			"offer":[
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满38减10","subName":"满38减10"},{"name":"满78减15","subName":"满78减15"},{"name":"满118减25","subName":"满118减25"},{"name":"满288减45","subName":"满288减45"}]},
+				{"name":"折扣","enName":"discount","list":[{"name":"折扣商品5折起","subName":"5折"}]},
+				{"name":"首单","enName":"firstOrder","list": [{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list":[{"name":"特价商品9.9元起","subName":"9.9特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": []},
+				{"name":"红包","enName":"luckyMoney","list": []}	
+			],
+			"service": [{"name": "开发票"}],
+			"nearby": []
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/8/52/7da616a9e07ab1a658ec3d508d78ejpeg.jpeg",
+			"name": "塔里木食府中华传统兰州牛肉面",
+			"subName": "塔里木食府",
+			"status":1,
+			"tag": "",
+			"id": "E2998039178279703814",
+			"score": 4.7,
+			"sales": 153,
+			"hummingbird": "",
+			"onTime": "",
+			"startUpSend": 20,
+			"freight": 8,
+			"duration": 43,
+			"distance": 1.97,
+			"evaluate": "",
+			"offer": [
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满30减3","subName":"满30减3"},{"name":"满50减5","subName":"满50减5"}]},
+				{"name":"折扣","enName":"discount","list":[]},
+				{"name":"首单","enName":"firstOrder","list":[{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list": [{"name":"特价商品3元起","subName":"3元特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": []},
+				{"name":"红包","enName":"luckyMoney","list": []}	
+			],
+			"service": [{"name": "开发票"}],
+			"nearby": []
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/d/46/4811b51836d188ce4ddb4be9bf764png.png",
+			"name": "汇鑫饺子王东北家乡菜",
+			"subName": "汇鑫饺子王",
+			"status":1,
+			"tag": "",
+			"id": "E15715312142482142167",
+			"score": 4.7,
+			"sales": 1184,
+			"hummingbird": "蜂鸟专送",
+			"onTime": "",
+			"startUpSend": 20,
+			"freight": 5.5,
+			"duration": 39,
+			"distance": 2.02,
+			"evaluate": "",
+			"offer":[
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满40减4","subName":"满40减4"},{"name":"满60减8","subName":"满60减8"},{"name":"满80减10","subName":"满80减10"}]},
+				{"name":"折扣","enName":"discount","list":[]},
+				{"name":"首单","enName":"firstOrder","list":[{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list": [{"name":"特价商品4元起","subName":"4元特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": []},
+				{"name":"红包","enName":"luckyMoney","list": []}	
+			],
+			"service": [{"name": "开发票"}],
+			"nearby": []
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	},{
+		"shop":{
+			"logo": "https://fuss10.elemecdn.com/c/09/b0769e4a6093c4312cde750f56ae8png.png",
+			"name": "洞庭家宴",
+			"subName": "洞庭家宴",
+			"status":1,
+			"tag": "新店",
+			"id": "E7076788617155882583",
+			"score": 4.3,
+			"sales": 56,
+			"hummingbird": "",
+			"onTime": "",
+			"startUpSend": 20,
+			"freight": 8.5,
+			"duration": 36,
+			"distance": 2.17,
+			"evaluate": "",
+			"offer":[
+				{"name":"满减","enName":"fullReduction","list":[{"name":"满100减2","subName":"满100减2"}]},
+				{"name":"折扣","enName":"discount","list":[]},
+				{"name":"首单","enName":"firstOrder","list":[{"name":"新用户下单立减17元(不与其它活动同享)","subName":"首单减17"}]},
+				{"name":"特价","enName":"specialPrice","list":[{"name":"特价商品3元起","subName":"3元特价"}]},
+				{"name":"满赠","enName":"fullGift","list": []},
+				{"name":"新客","enName":"newCustomer","list": []},
+				{"name":"会员","enName":"member","list": []},
+				{"name":"红包","enName":"luckyMoney","list": []}
+			],
+			"service": [{"name": "开发票"}],
+			"nearby": []
+		},
+		"foods":[],
+		"comment":{"list":[]},
+		"goods":[]
+	}
+]

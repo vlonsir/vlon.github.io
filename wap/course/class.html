@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="icon" href="http://www.vlon.cn/favicon.ico" type="image/x-icon"/>
+	<title>正在加载...</title>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./plugin/layui/layui.all.js"></script>
+	<script type="text/javascript" src="./plugin/template/template-web.js"></script>
+	<script type="text/javascript" src="./plugin/bootstrap/4.3.1/js/bootstrap.js"></script>
+	<script type="text/javascript" src="./js/base.js"></script>
+	<script type="text/javascript" src="./js/class.js"></script>
+	<link rel="stylesheet" href="./plugin/bootstrap/3.4.1/css/bootstrap.css" />
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_959376_tn59ieubt5e.css" />
+	<link rel="stylesheet" href="./plugin/layui/layui.css" />
+	<link rel="stylesheet" href="./css/base.css" />
+	<link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="./css/class.css" />
+</head>
+<body>
+	<header class="bg-primary pt20 pb20 tc">
+		<a href="javascript:;" class="back"><i class="iconfont icon-back"></i></a>
+		<span>正在加载...</span>
+		<a href="javascript:;" class="display" name="icon-caidan"><i class="iconfont"></i></a>
+	</header>
+	<div class="panel panel-default single">
+		<div class="panel-heading"><i>单项选择题<span>（本大题共25小题，每小题2分，共50分）</span></i>
+			<a href="javascript:;" class="slideUp"><i class="iconfont icon-less"></i></a>
+		</div>
+		<div class="panel-body" id="single">
+			<script type="text/html" id="singleTpl">
+				{{each list}}
+					<dl>
+						<dt>{{$index+1}}、{{$value.name}}（<span></span>）</dt>
+						<dd>
+							{{set temp = $value.right}}
+							{{each $value.answer}}
+								<a href="javascript:;" class="list-group-item" name="{{ $value.c==temp[0] ? $value.c : ''}}">
+									<i class="iconfont icon-yuanxingweixuanzhong">{{$value.c}}</i><span>{{$value.n}}</span>
+								</a>
+							{{/each}}
+						</dd>
+						{{if $value.analysis}}
+						<dd>
+							<p><a href="javascript:;" class="showAnalysis">查看解析</a></p>
+							<div class="analysis">{{$value.analysis}}</div>
+						</dd>
+						{{/if}}
+					</dl>
+				{{/each}}
+			</script>
+		</div>
+		<div class="panel-footer">
+			<a href="javascript:;" class="btn btn-primary result">结果</a>
+			<div class="res">
+				<p class="r">做对<span class="num"></span>题，得<span class="score"></span>分</p>
+				<p class="w">做错<span></span>题</p>
+				<p class="n">未做<span></span>题</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default multiple">
+		<div class="panel-heading"><i>多项选择题</i><a href="javascript:;" class="slideUp"><i class="iconfont icon-less"></i></a></div>
+		<div class="panel-body" id="multiple">
+			<script type="text/html" id="multipleTpl">
+			{{each list}}
+			<dl>
+				<dt>{{$index+1}}、{{$value.name}}（<span></span>）</dt>
+				<dd>
+					{{set temp = $value.right}}
+					{{each $value.answer}}
+						{{set emp = $value.c==temp[0]?temp[0]:$value.c==temp[1]?temp[1]:$value.c==temp[2]?temp[2]:$value.c==temp[3]?temp[3]:''}}
+						<a href="javascript:;" class="list-group-item" name="{{emp}}">
+							<i class="iconfont icon-fangxingweixuanzhong"></i>
+							<span>{{$value.c}} {{$value.n}}</span>
+						</a>
+					{{/each}}
+				</dd>
+				{{if $value.analysis}}
+				<dd>
+					<p><a href="javascript:;" class="showAnalysis">查看解析</a></p>
+					<div class="analysis">{{$value.analysis}}</div>
+				</dd>
+				{{/if}}
+			</dl>
+			{{/each}}
+			</script>
+		</div>
+	</div>
+	<div class="panel panel-default short">
+		<div class="panel-heading"><i>简答题<span>（本大题共5小题，每小题6分，共30分）</span></i><a href="javascript:;" class="slideUp"><i class="iconfont icon-less"></i></a></div>
+		<div class="panel-body" id="short">
+			<script type="text/html" id="shortTpl">
+			{{each list}}
+			<dl>
+				<dt>{{$index+1}}、{{$value.name}}</dt>
+				<dd>{{#$value.analysis}}</dd>
+			</dl>
+			{{/each}}
+			</script>
+		</div>
+	</div>
+	<div class="panel panel-default discussion">
+		<div class="panel-heading"><i>论述题<span>（本大题共3小題，考生任选其中2題作答，每小題10分，共20分）</span></i><a href="javascript:;" class="slideUp"><i class="iconfont icon-less"></i></a></div>
+		<div class="panel-body" id="discussion">
+			<script type="text/html" id="discussionTpl">
+			{{each list}}
+			<dl>
+				<dt>{{$index+1}}、{{$value.name}}</dt>
+				<dd>{{#$value.analysis}}</dd>
+			</dl>
+			{{/each}}
+			</script>
+		</div>
+	</div>
+	<p class="none n">暂无考题</p>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<title>积分兑换</title>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript" src="js/fuchs.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".list .convert .scoreInfo .myScore").html(localStorage.fuchsScore);
+			getProduct();
+		})
+	</script>
+	<link type="text/css" rel="stylesheet" href="css/fuchs.css?v=1.0.0.1"/> 
+</head>
+<body class="list">
+	<div class="logo">
+
+		<img src="http://static.weifeng360.com/html/fuchsScore/images/logo.svg" alt="" class="logo">
+	</div>
+	<div class="head">
+		<img src="images/t.png" alt="" class="slogen">
+	</div>
+	<div class="body">
+		<ul id="prod">
+			<script type="text/html" id="tpl_prod">
+			{{each list as value index}}
+			<li>
+				<img src="images/{{value.id}}.jpg" alt="">
+				<div class="r">
+					<p class="t">{{value.name}}</p>
+					<div class="b">
+						<span>{{value.score}}</span>
+						<a href="javascript:;" name="{{value.id}}">兑换</a>
+					</div>
+				</div>
+			</li>
+			{{/each}}
+			{{if noContent}}
+				<li><p style="text-align:center;line-height:100px;">暂无内容</p></li>
+			{{/if}}
+			</script>
+		</ul>
+	</div>
+	<div class="foot">
+		<a href="list.html"><img src="images/h.png" alt="" />兑换商品</a>
+		<a href="user.html"><img src="images/u.png" alt="" />我的</a>
+	</div>
+	<div class="convert">
+		<div class="header">			
+			<a href="javascript:;" class="back"></a>兑换清单
+		</div>
+		<div class="userInfo">
+			<p><span>收货人：</span><input type="text"></p>
+			<p><span>联系电话：</span><input type="tel" maxlength="11"></p>
+			<p><span>收货地址：</span><textarea></textarea></p>
+		</div>
+		<div class="convertInfo">
+			<p class="t">兑换清单</p>
+			<div class="info">
+				<img src="" alt="">
+				<div class="r">
+					<p class="t">数据加载中...</p>
+					<div class="b">
+						<span class="score">数据加载中...</span>
+						<span class="num">x1</span>
+					</div>
+				</div>
+			</div>
+			<div class="scoreInfo">
+				<span class="myScore">0</span>
+				<span class="payScore">数据加载中...</span>
+			</div>
+		</div>
+		<button>提交订单</button>
+	</div>
+</body>
+</html>
