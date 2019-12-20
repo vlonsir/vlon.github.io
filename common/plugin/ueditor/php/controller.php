@@ -57,3 +57,6 @@ if (isset($_GET["callback"])) {
 } else {
     echo $result;
 }
+
+
+?>
