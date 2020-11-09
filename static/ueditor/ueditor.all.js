@@ -11481,7 +11481,7 @@ UE.plugins['font'] = function () {
             { name: 'impact', val: 'impact,chicago'},
             { name: 'timesNewRoman', val: 'times new roman'}
         ],
-        'fontsize': [10, 11, 12, 14, 16, 18, 20, 22, 24, 28, 30, 32, 36]
+        'fontsize': [10, 11, 12, 14, 16, 18, 20, 24, 36]
     });
 
     function mergeWithParent(node){
