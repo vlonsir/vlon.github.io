@@ -47,7 +47,7 @@
 	    	setcookie("ticket", $ticket, time()+7200);
     	}
 
-    	$jssdkUrl = 'http://www.vlon.cn/api/motorvac/scanQRCode/index.html';
+    	$jssdkUrl = 'https://vlon.cn/api/motorvac/scanQRCode/index.html';
     	$timestamp = time();
     	$noncestr = createNoncestr();
 
