@@ -13231,7 +13231,7 @@ UE.plugins['insertcode'] = function() {
                 rng = me.selection.getRange(),
                 pre = domUtils.findParentByTagName(rng.startContainer,'pre',true);
             if(pre){
-                pre.className = 'brush:'+lang+';toolbar:false;';
+                pre.className = 'brush:'+lang+';toolbar:true;';
             }else{
                 var code = '';
                 if(rng.collapsed){
@@ -13328,9 +13328,6 @@ UE.plugins['insertcode'] = function() {
                     rng.selectNodeContents(pre).select()
                 }
             }
-
-
-
         },
         queryCommandValue : function(){
             var path = this.selection.getStartElementPath();
