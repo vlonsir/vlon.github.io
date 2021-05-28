@@ -115,9 +115,18 @@ $(function(){
     var v = $(this).val();
     if(v) {
       $("#shijuan option").hide();
-      $("#shijuan option:first-child,#shijuan option."+v).show();
+      $("#shijuan option:first-child, #shijuan option."+v).show();
     } else {
       $("#shijuan").val("");
+    }
+  });
+  //当 选择试卷 下拉框 改变时
+  $("#shijuan").on("change", function() {
+    var v = $(this).val();
+    if(v) { 
+      getQuestionsById(v);
+    } else {
+      removeQuestionsItem();
     }
   });
   //单选题 选择 答案选项
@@ -255,31 +264,30 @@ $(function(){
             </li>`;
     $(html).insertBefore(".addMultipleTimu");   
   });
-  
-  //单选 简答题 论述题 删除当前题目
+  //单选 多选题  简答题 论述题 删除当前题目
   $(document).delegate(".single .timu a, .multiple .timu a, .short .timu a, .discussion .timu a", "click", function() {
     $(this).parent().parent().remove();
   });
   //简答题 增加题目
   $(".short .addShortTimu button").on("click", function() {
-    var html = '<li class="item">'+
-              '<div class="timu">'+
-                '<input type="text" placeholder="题目" class="form-control">'+
-                '<a href="javascript:;"><i class="iconfont icon-minus"></i></a>'+
-              '</div>'+
-              '<textarea type="text" placeholder="答案" class="form-control" rows="10"></textarea>'+
-            '</li>';
+    var html = `<li class="item">
+              <div class="timu">
+                <input type="text" placeholder="题目" class="form-control">
+                <a href="javascript:;"><i class="iconfont icon-minus"></i></a>
+              </div>
+              <textarea type="text" placeholder="答案" class="form-control" rows="10"></textarea>
+            </li>`;
     $(html).insertBefore(".addShortTimu"); 
   });
   //论述题 增加题目
   $(".discussion .addDiscussionTimu button").on("click", function() {
-    var html = '<li class="item">'+
-              '<div class="timu">'+
-                '<input type="text" placeholder="题目" class="form-control">'+
-                '<a href="javascript:;"><i class="iconfont icon-minus"></i></a>'+
-              '</div>'+
-              '<textarea type="text" placeholder="答案" class="form-control" rows="10"></textarea>'+
-            '</li>';
+    var html = `<li class="item">
+              <div class="timu">
+                <input type="text" placeholder="题目" class="form-control">
+                <a href="javascript:;"><i class="iconfont icon-minus"></i></a>
+              </div>
+              <textarea type="text" placeholder="答案" class="form-control" rows="10"></textarea>
+            </li>`;
     $(html).insertBefore(".addDiscussionTimu"); 
   });
   //保存考题
@@ -647,5 +655,158 @@ function setCountByTypeId(id, count) {
         console.log(header, status, errorThrown);
         layer.close(load); 
       }
+  })
+}
+//根据试卷ID查询试卷下的试题
+function getQuestionsById(id) {
+  if(id) {
+    var load = layer.load(2);
+    $.ajax({
+        "url": "https://d.apicloud.com/mcm/api/questions/?filter="+encodeURIComponent('{"where":{"typeId":"'+id+'"},"skip":0,"limit":10000}'),
+        "method": "GET",
+        "cache": false,
+        "headers": vlon.headers,
+        success: function(data, status, header){
+          if(status === "success") {
+            if(data && data.length>0) {
+              var single = [], multiple = [], short = [], discussion = [];
+              data.forEach(item => {
+                if(item.type == "single") { single.push(item); }
+                if(item.type == "multiple") { multiple.push(item); }
+                if(item.type == "short") { short.push(item); }
+                if(item.type == "discussion") { discussion.push(item); }
+              })
+              insertQuestionsToPage(single, multiple, short, discussion);
+            } else {
+              removeQuestionsItem()
+            }
+          } else {
+            console.log(data, status, header);
+          }
+          layer.close(load); 
+        },
+        error: function(header, status, errorThrown){
+          console.log(header, status, errorThrown);
+          layer.close(load); 
+        }
+    })
+  } else {
+    removeQuestionsItem()
+  }
+}
+//在页面上移除试题
+function removeQuestionsItem() {
+  if($(".single .item").length>0) {
+    $(".single .item").remove()
+  }
+  if($(".multiple .item").length>0) {
+    $(".multiple .item").remove()
+  }
+  if($(".short .item").length>0) {
+    $(".short .item").remove()
+  }
+  if($(".discussion .item").length>0) {
+    $(".discussion .item").remove()
+  }
+}
+//将查询出来的试题，载入到页面中
+function insertQuestionsToPage(single, multiple, short, discussion) {
+  removeQuestionsItem();
+  if(single.length>0) { insertSingle(single) }
+  if(multiple.length>0) { insertMultiple(multiple) }
+  if(short.length>0) { insertShort(short) }
+  if(discussion.length>0) { insertDiscussion(discussion) }
+}
+//将单选试题插入页面
+function insertSingle(list) {
+  if(!list || list.length==0) {return false;}
+  var html = "";
+  list.forEach(item => {
+    html += `<li class="item">
+                  <div class="timu">
+                    <input type="text" placeholder="题目" class="form-control" value="${item.name}">
+                    <a href="javascript:;"><i class="iconfont icon-minus"></i></a>
+                  </div>`;
+      if(item.answer && item.answer.length>0) {
+        item.answer.forEach(a => {
+          html += `<div class="choose-item">
+                  <a href="javascript:;" class="choose ${item.right[0]==a.c ? 'active' : ''}">
+                    <i class="iconfont ${item.right[0]==a.c ? 'icon-xuanzhong' : 'icon-xuanze'}"></i><span>${a.c}</span>
+                  </a>
+                  <input type="text" placeholder="选项" class="form-control" value="${a.n}">
+                  <a href="javascript:;" class="set add"><i class="iconfont icon-add"></i></a>
+                </div>`;
+        })
+      }     
+              `<input type="text" class="form-control analysis" placeholder="答案解析" value="${item.analysis||''}" />
+            </li>`;
+    })
+    $(html).insertBefore(".addSingleTimu"); 
+}
+//将多选试题插入页面
+function insertMultiple(list) {
+  if(!list || list.length==0) {return false;}
+  var html = "";
+  list.forEach(item => {
+    html += `<li class="item">
+                <div class="timu">
+                  <input type="text" placeholder="题目" class="form-control" value="${item.name}">
+                  <a href="javascript:;"><i class="iconfont icon-minus"></i></a>
+                </div>`;
+      if(item.answer && item.answer.length>0) {
+        item.answer.forEach(a => {
+          var cls = '', icon = "icon-duoxuan-weixuan";
+          if(item.right && item.right.length>0) {
+            item.right.forEach(c => {
+              if(c == a.c) {
+                cls = "active";
+                icon = "icon-duoxuan-yixuan"
+              }
+            })
+          }
+          html += `<div class="choose-item">
+              <a href="javascript:;" class="choose ${cls}">
+                <i class="iconfont ${icon}"></i><span>${a.c}</span>
+              </a>
+              <input type="text" placeholder="选项" class="form-control" value="${a.n}">
+              <a href="javascript:;" class="set add"><i class="iconfont icon-add"></i></a>
+            </div>`;
+        })
+      }
+              
+      html += `<input type="text" class="form-control analysis" placeholder="答案解析" value="${item.analysis||''}" />
+      </li>`;
+  })
+  $(html).insertBefore(".addMultipleTimu");  
+}
+//将简答试题插入页面
+function insertShort(list) {
+  if(!list || list.length==0) {return false;}
+  var html = "";
+  list.forEach(item => {
+    html += `<li class="item">
+              <div class="timu">
+                <input type="text" placeholder="题目" class="form-control" value="${item.name}">
+                <a href="javascript:;"><i class="iconfont icon-minus"></i></a>
+              </div>
+              <textarea type="text" placeholder="答案" class="form-control" rows="10">${item.analysis||''}</textarea>
+            </li>`;
+  })
+  
+    $(html).insertBefore(".addShortTimu"); 
+}
+//将论述试题插入页面
+function insertDiscussion(list) {
+  if(!list || list.length==0) {return false;}
+  var html = "";
+  list.forEach(item => {
+    html += `<li class="item">
+              <div class="timu">
+                <input type="text" placeholder="题目" class="form-control" value="${item.name}" />
+                <a href="javascript:;"><i class="iconfont icon-minus"></i></a>
+              </div>
+              <textarea type="text" placeholder="答案" class="form-control" rows="10">${item.analysis||''}</textarea>
+            </li>`;
+    $(html).insertBefore(".addDiscussionTimu"); 
   })
 }
