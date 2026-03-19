@@ -1,14 +1,9 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
-    "version": "1.8.2",
-    "homepage": "http://huxpro.github.io",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Huxpro/huxpro.github.io"
-    },
-    "bugs": "https://github.com/Huxpro/huxpro.github.io/issues",
+    "name": "vlon-blog",
+    "title": "vlon Blog",
+    "author": "vlonsir <894492015@qq.com>",
+    "version": "1.0.0",
+    "homepage": "https://vlon.github.io",
     "devDependencies": {
         "grunt": ">=1.3.0",
         "grunt-banner": "~0.2.3",
